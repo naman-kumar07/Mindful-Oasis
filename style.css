@@ -1,0 +1,85 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  padding: 4vh 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 3vh 2rem;
+  margin: 2vh auto;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.breathing .circle {
+  width: 20vw;
+  height: 20vw;
+  max-width: 120px;
+  max-height: 120px;
+  margin: 0 auto 1rem;
+  background-color: #add8e6;
+  border-radius: 50%;
+  animation: breathe 6s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #e6e6fa;
+  padding: 2vh;
+  font-size: 1rem;
+  margin-top: 4vh;
+}
+
+/* RESPONSIVE STYLES */
+@media (min-width: 768px) {
+  section {
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .breathing .circle {
+    width: 100px;
+    height: 100px;
+  }
+}
