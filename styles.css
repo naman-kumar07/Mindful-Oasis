@@ -1,85 +1,101 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
-
+/* Base Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f0f8ff;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
-  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
-  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-  padding: 4vh 2rem;
+  background-color: #004080;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-section {
-  padding: 3vh 2rem;
-  margin: 2vh auto;
-  max-width: 90%;
+/* Form Section */
+form {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.breathing .circle {
-  width: 20vw;
-  height: 20vw;
-  max-width: 120px;
-  max-height: 120px;
-  margin: 0 auto 1rem;
-  background-color: #add8e6;
-  border-radius: 50%;
-  animation: breathe 6s ease-in-out infinite;
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  resize: vertical;
 }
 
-@keyframes breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.5); }
+button {
+  background-color: #004080;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  text-align: left;
+button:hover {
+  background-color: #003060;
 }
 
-a {
-  color: #1e90ff;
-  text-decoration: none;
+/* Listings Section */
+#listings {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
+/* Footer */
 footer {
-  background: #e6e6fa;
-  padding: 2vh;
-  font-size: 1rem;
-  margin-top: 4vh;
+  background-color: #eee;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
-/* RESPONSIVE STYLES */
-@media (min-width: 768px) {
-  section {
-    max-width: 700px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  form, #listings {
+    padding: 15px;
   }
 
-  h1 {
-    font-size: 3rem;
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
   }
 
-  .breathing .circle {
-    width: 100px;
-    height: 100px;
+  header p {
+    font-size: 14px;
+  }
+
+  input, textarea {
+    font-size: 14px;
   }
 }
